@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
   s.summary     = "Newsletter and Mailing List manager"
   s.description = "Combines the 'newsletter' and 'mail_manager' gems with viable admin, login and navigation."
 
-  s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
+  s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.md"]
 
   s.add_dependency "rails", "~> 3.2.19"
   #s.add_dependency "mail_manager"
