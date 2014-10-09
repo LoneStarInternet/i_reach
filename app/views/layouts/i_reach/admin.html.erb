@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- iReach template -->
+  <title><%= h(yield(:title) || "iReach Newsletter Manager") %></title>
+  <%= stylesheet_link_tag    "i_reach/application", :media => "all" %>
+  <%= stylesheet_link_tag jqueryui_css_google_cdn('le-frog', '1.10.3') %>
+  <%= javascript_include_tag "i_reach/application" %>
+  <%= csrf_meta_tags %>
+
+<% begin %>
+<% if admin_nav_menu.present? %>
+  <script>
+     function showMenu(id, id2) {
+       <% for menuitem in admin_nav_menu %>
+         <% if menuitem.admin_menu && menuitem.admin_menu.length > 0 && menuitem.is_visible %>
+              elem = document.getElementById("menu_<%= menuitem.id %>")
+              if (elem) elem.style.display = "none";
+           <% for submenuitem in menuitem.admin_menu.order("menu_order ASC") %>
+              <% if submenuitem.admin_menu && submenuitem.admin_menu.length > 0 && submenuitem.is_visible %>
+                elem = document.getElementById("menu_<%= submenuitem.id %>")
+                if (elem) elem.style.display = "none";
+              <% end %>
+           <% end %>
+         <% end %>
+       <% end %>
+       document.getElementById("menu_"+id).style.display = "inline";
+       if (id2) document.getElementById("menu_"+id2).style.display = "inline";
+     }
+  </script>
+<% end %>
+<% rescue => e %>
+<!-- Error building JS Menu <%= e.message %> <%= e.backtrace.join("\n") %> -->
+<% end %>
+
+  <%= content_for :head %>
+</head>
+<body>
+
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><%= image_tag "i_reach/1topLeft.gif", width: "269", height:"85" %></td>
+    <td width="100%" align="left" background="/assets/i_reach/topMid.gif"><%= image_tag "i_reach/1topMidR.gif", width: "435", height: "85" %></td>
+    <td align="right"><%= image_tag "i_reach/1topRight.gif", width: "62", height: "85" %></td>
+  </tr>
+</table>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  
+  <tr>
+    <td valign="top" bgcolor="#FFFFFF">
+  <table border="0" cellspacing="0" cellpadding="0" class="menu">
+  <tr>
+    <td valign="top"><%= image_tag "i_reach/menuMainLeft.gif", width: "7", height: "257" %></td>
+    <td valign="top" class="table-bk">
+    <!-- Start Admin Menu <%= @admin_nav_menu.inspect %> -->
+<% begin %>  
+    <% if admin_nav_menu.present? %>
+      <% for menuitem in admin_nav_menu %>
+        <% if menuitem.admin_menu && menuitem.admin_menu.length > 0 && menuitem.is_visible && menuitem.authorized(session[:admin][:user_id]) %>
+          <span class="category" onClick="javascript:showMenu(<%= menuitem.id %>, 0)" style="cursor:pointer"><%= menuitem.description %></span><br/>
+          <div id="menu_<%= menuitem.id %>" style="display:<%= (params[:menu_id].to_i == menuitem.id) ? 'inline' : 'none' %>">
+          <% for submenuitem in menuitem.admin_menu %>
+            <% if submenuitem.is_visible and submenuitem.authorized(session[:admin][:user_id]) %>
+              <% if submenuitem.admin_menu && submenuitem.admin_menu.length > 0 && submenuitem.is_visible && submenuitem.authorized(session[:admin][:user_id]) %>
+                  &nbsp;&nbsp;&nbsp;<span class="menuSM" onClick="javascript:showMenu(<%= menuitem.id %>, <%= submenuitem.id %>)" style="cursor:pointer"><%= submenuitem.description %></span><br/>
+                  <div id="menu_<%= submenuitem.id %>" style="display:<%= (params[:submenu_id].to_i == submenuitem.id) ? 'inline' : 'none' %>">
+                  <% for subsubmenuitem in submenuitem.admin_menu %>
+                    <% if subsubmenuitem.is_visible and subsubmenuitem.authorized(session[:admin][:user_id]) %>
+                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="menuSM"><%= link_to menuitem.description, "/#{submenuitem.path}?menu_id=#{submenuitem.id}" %></span><br/>
+                    <% end %>
+                  <% end %>
+                  </div>
+               <% elsif submenuitem.is_visible and submenuitem.authorized(session[:admin][:user_id]) %>
+                  &nbsp;&nbsp;&nbsp;<span class="menuSM"><%= link_to submenuitem.description, "/#{submenuitem.path}?menu_id=#{menuitem.id}" %></span><br/>
+               <% end %>
+            <% end %>
+          <% end %>
+          </div>
+     <hr class="line" />
+        <% elsif menuitem.is_visible and menuitem.authorized(session[:admin][:user_id]) %>
+          <%= link_to menuitem.description, "/#{menuitem.path}" %><br/>
+         <hr class="line" />
+        <% end %>
+      <% end %>
+    <% end %>
+<% rescue => e %>
+<!-- Error building Menu <%= e.message %> <%= e.backtrace.join("\n") %> -->
+<% end %>
+</td>
+</tr>
+<tr>
+<td><%= image_tag "i_reach/menuBotLeft.gif", width: "7", height: "8" %></td>
+<td><%= image_tag "i_reach/menuBot.gif", width: "176", height: "8" %></td></tr>
+</table>
+  
+  
+  
+  
+    </td>
+    <td width="100%" valign="top" bgcolor="#FFFFFF" class="main">
+      
+      <% flash.each do |name, msg| -%>
+        <%= content_tag :div, msg, :id => "flash_#{name}" %>
+      <% end -%>
+      
+      <% if show_title? -%>
+        <h1><%=h yield(:title) %></h1>
+      <% end -%>
+      
+      <%= yield %>
+      
+      <%= yield :page_navigation %>
+</td>
+
+<td background="/assets/i_reach/1midRight.gif"><%= image_tag "i_reach/1midRight.gif", width: "62", height: "19" %></td>
+  </tr>
+</table>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="100%" background="/assets/i_reach/1botMid.gif"><%= image_tag "i_reach/1botMid.gif", width: "13", height: "39" %></td>
+<td align="right"><%= image_tag "i_reach/1botRight.gif", width: "62", height: "39" %></td>
+</tr>
+</table>
+
+</body>
+</html>

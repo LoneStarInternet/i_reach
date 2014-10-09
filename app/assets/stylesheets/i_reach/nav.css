@@ -1,216 +1,41 @@
-body {
-   margin:0;
-   padding:0;
-   border:0;
-   font-family:Arial, Helvetica, sans-serif;
-   font-size:12px;
-   background:#fdba59;
+.line
+{	color: #d9eabd;
+	width:160px;
+	background: #d9eabd;
+	border:none;
+	height:1px;
+	margin:4px 0;
+	
 }
 
-img {
-   display: block;
-}
+.menu {font-size: 10pt;
+      font-family: helvetica, arial, sans-serif;
+	  font-weight: bold;
+	  line-height: 12pt;
+	  color: #000000;
+	  width:176px;
+	  }
+.menu a:link {  color: #000000; text-decoration: none; }
+.menu a:visited {  color: #000000; text-decoration: none; }
+.menu a:active {  color: #000000; text-decoration: none; }
+.menu a:hover {  color: #Fc6; text-decoration: none; }
 
-.main {	
-   font-family: helvetica, arial, sans-serif;
-	font-size: 11pt;
-	font-weight: normal;
-	padding-left: 20px;
-	padding-top: 20px;
-	padding-right: 10px;
-	padding-bottom: 5px; }
+.category:hover {  color:#FC6; text-decoration: none; }
 
-#container{
-   margin:0;
-   padding:0;
-   width:100%;
-   float:left;
-}
-
-h1 {
-   font-size: 16pt;
-   color: #599c41;
-}
-
-/*Content------------------------------------------------*/
-#content {
-        margin:0; 
-        padding:10px 15px 15px 15px;
-        clear:both; 
-        font-family: Arial, Helvetica, sans-serif;
-        border-top: 1px solid #c4c1a8;
-}
-
-#content table {
-        font-family:Arial, Helvetica, sans-serif;
-        font-size: 14px;
-}
- 
-hr {
-        margin: 0 0 0 10px;
-        width: 620px;
-        text-align:center;
-        color: #636343;
-}
-
-
-/* tables used as lists ------------------------------*/
-table.list {
-        margin:10px 0 20px 20px; 
-        padding: 0; 
-        border-top: 1px solid #599c41;
-        border-right: 1px solid #599c41;
-        border-left: 1px solid #599c41;
-        font-size: 10pt;
-	border-collapse: collapse;
-}
-
-table.list th {
-	background-color: #fef1de;
-	border-bottom: 2px solid #599c41;
-	padding: 3px 10px 0;
-}
-
-table.list td {
-        margin:0; 
-        padding: 5px 5px 5px; 
-        border-bottom: 1px solid #599c41;
-}
-
-table.list tr.title {
-      font-weight: bold;
-      color: #ffffff;
-      font-size: 11pt;
-      background: #599c41;
-      white-space: nowrap;
-}
-
-                
-/* none of the hover stuff will work in IE 
- * without a proper DOCTYPE declaration.
- * HTML 1.0 Transitional//EN works, as does 
- * XHTML 1.0 Strict//EN 
- */
-                
-table.list tr.odd {
-   background: #d9eabd;
-} 
-table.list tr.even:hover {
-	background: #d9dcd3;
-}               
-
-table.list tr.odd:hover {
-	background: #e0f2c3;
-}
-
-table.list tr.even {
-	background: #e2e8d9;
-}
-
-
-/* form labels have different alignment*/
-label {font-size: 11pt;
+.menuSM {font-size: 9pt;
    font-family: helvetica, arial, sans-serif;
    font-weight: bold;
-   text-align: right;
-   color:#555;
-}       
-
-input, select, textarea {
-        margin: 6px 0;
-        padding: 2px;
-        text-align: left; 
-        color: #444;
-        border: 1px solid #599c41;
-        font-size: 10pt;
-        background-color: #e2e8d9;
+   line-height: 12pt;
+   color: #a42529;
+   
 }
+.menuSM a:link {  color:#Fff; text-decoration: none; }
+.menuSM a:visited {  color: #fff; text-decoration: none; }
+.menuSM a:active {  color: #fff; text-decoration: none; }
+.menuSM a:hover {  color:#FC6; text-decoration: none; }
 
-
-/*Input style buttons within table*/
-
-input.button {
-    width: auto;
-    padding-left: 8px;
-    padding-bottom: 3px;
-    padding-right: 5px;
-    /* Firefox wants the margin below */
-    margin-right: 5px;
-    font-size: 11pt;
-    text-decoration: none;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    border: 0;
-    background: url(/assets/i_reach/button_imgs/button1.gif) no-repeat;
-    color: #555;
-    height: 22px;
-    overflow: visible; /* supposed to fix IE spacing */
-    /* used to catch the buttonEnding */
-    position: relative;
-    cursor: pointer;
+.table-bk { 
+	background: url(/assets/i_reach/menuMain.gif) no-repeat top right;
+   padding-top: 20px;
+   padding-left:3px;
 }
-
-input.button:hover {
-   color: #a1ac85;
-}
-
-a.button:link, a.button:visited {
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 3px;
-    padding-bottom: 3px;
-    font-size: 11pt;
-    font-weight: bold;
-    text-decoration: none;
-    border: 0;
-    background: url(/assets/i_reach/button_imgs/button1.gif) no-repeat;
-    color: #555;
-    height: 22px;
-    /* used to catch the buttonEnding */
-    position: relative;
-    cursor: pointer; 
-}
-
-a.button:hover {
-   color: #efaa45;
-}
-
-div.buttonEnding {
-    position: absolute;
-    display: inline; 
-/* Firefox really wants -7px margin-left  and somehow there is space to the right of the button text in IE*/
-    margin-left: -10px; 
-    /* Firefox doesn't like the  margin-top below */
-    margin-top:  6px;
-    width: 17px;
-    height: 22px;
-    background: url(/assets/i_reach/button_imgs/end1.gif) no-repeat;
-}
-
-div.linkbuttonEnding{
-    position: absolute;
-    display: inline;
-    margin-left: -6px;
-    margin-top: -3px;
-    width: 17px;
-    height: 22px;
-    background: url(/assets/i_reach/button_imgs/end1.gif) no-repeat;
-}
-
-.newsletter_parts_group {
-    margin-top: 10px;
-    padding: 0 5px 5px 15px;
-    border: thin dashed #599c41;
-    background-color: #eee;
-}
-
-a:link{
-	color: #F60;
-	text-decoration:none;}
-
-a:visited{
-	color:#F60;
-	text-decoration:none;}
-
-a:hover{
-	color: #efaa45;}

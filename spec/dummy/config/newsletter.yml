@@ -1,0 +1,24 @@
+---
+common:
+  newsletters_path: <%= "#{RAILS_ROOT}/newsletters" %>
+  asset_path: public/newsletter_assets
+  newsletter_path_prefix: /admin
+  newsletter_table_prefix: newsletter_
+  site_url: http://lvh.me
+  mail_manager:
+    unsubscribe_path: /listmgr
+    dont_include_images_domains:
+    - yahoo.com
+    - google.com
+    - hotmail.com
+    sleep_time_between_messages: 0.3
+    path_prefix: /admin
+    table_prefix: mail_manager_
+    default_from_email_address: Organization Cotact <contact@example.com>
+    secret: !binary |-
+      YjEwMTY3OWE5MDk3ZmVmMzIxZThmNWI5YzZlYmIw
+    bounce:
+      email_address: bounces@example.com
+      login: test
+      password: secret
+      pop_server: pop.example.com

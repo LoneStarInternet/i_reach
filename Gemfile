@@ -8,11 +8,8 @@ gemspec
 # jquery-rails is used by the dummy application
 gem "jquery-rails"
 
-# gem 'lockable', path: '/home/chrisboy/Projects/lockable'
-gem 'lockable', git: 'https://github.com/chrisboy333/lockable.git'
-
-gem 'mail_manager', path: '/home/chrisboy/Projects/LSI/mail_manager'
-gem 'newsletter', path: '/home/chrisboy/Projects/LSI/newsletter'
+#gem 'mail_manager', path: '/home/chrisboy/Projects/LSI/mail_manager'
+#gem 'newsletter', path: '/home/chrisboy/Projects/LSI/newsletter'
 
 # Testing Gems
 gem "rspec-rails", "~>2.14"

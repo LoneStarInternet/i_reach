@@ -4,7 +4,7 @@
   <!-- iReach template -->
   <title><%= h(yield(:title) || "iReach Newsletter Manager") %></title>
   <%= stylesheet_link_tag    "i_reach/application", :media => "all" %>
-  <%= stylesheet_link_tag jqueryui_css_google_cdn('le-frog', '1.10.3') %>
+  <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/le-frog/jquery-ui.css" media="screen" rel="stylesheet" type="text/css" />
   <%= javascript_include_tag "i_reach/application" %>
   <%= csrf_meta_tags %>
   <%= content_for :head %>
@@ -31,12 +31,12 @@
           <td valign="top"><%= image_tag "i_reach/menuMainLeft.gif", width: "7", height: "257" %></td>
           <td valign="top" class="table-bk">
             <div id="menu" style="display: inline;">
-                    &nbsp;&nbsp;&nbsp;<span class="menuSM"><a href="/admin/newsletter/newsletters?menu_id=11">Newsletters</a></span><br>
-                    &nbsp;&nbsp;&nbsp;<span class="menuSM"><a href="/admin/newsletter/designs?menu_id=11">Designs</a></span><br>
-                    &nbsp;&nbsp;&nbsp;<span class="menuSM"><a href="/admin/mail_mgr/contacts?menu_id=11">Contacts</a></span><br>
-                    &nbsp;&nbsp;&nbsp;<span class="menuSM"><a href="/admin/mail_mgr/mailings?menu_id=11">Mailings</a></span><br>
-                    &nbsp;&nbsp;&nbsp;<span class="menuSM"><a href="/admin/mail_mgr/mailing_lists?menu_id=11">Mailing Lists</a></span><br>
-                    &nbsp;&nbsp;&nbsp;<span class="menuSM"><a href="/admin/mail_mgr/bounces?menu_id=11">Bounces</a></span><br>
+              &nbsp;&nbsp;&nbsp;<span class="menuSM"><a href="/admin/newsletter/newsletters?menu_id=11">Newsletters</a></span><br>
+              &nbsp;&nbsp;&nbsp;<span class="menuSM"><a href="/admin/newsletter/designs?menu_id=11">Designs</a></span><br>
+              &nbsp;&nbsp;&nbsp;<span class="menuSM"><a href="/admin/mail_manager/contacts?menu_id=11">Contacts</a></span><br>
+              &nbsp;&nbsp;&nbsp;<span class="menuSM"><a href="/admin/mail_manager/mailings?menu_id=11">Mailings</a></span><br>
+              &nbsp;&nbsp;&nbsp;<span class="menuSM"><a href="/admin/mail_manager/mailing_lists?menu_id=11">Mailing Lists</a></span><br>
+              &nbsp;&nbsp;&nbsp;<span class="menuSM"><a href="/admin/mail_manager/bounces?menu_id=11">Bounces</a></span><br>
             </div>
           </td>
         </tr>
