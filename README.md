@@ -17,11 +17,11 @@ Optional Dependencies
 Installation
 -----------
 * install rvm/ruby 1.9.3/bundler/rails 3.2.x then run the following or skip ahead to the next step if you already have a rails 3.2.x app  
-  `# new rails app where you want to not use 'test' and want to use mysql
-  rails new MyApp -T --skip-bundle -d mysql
-  # or optionally a default rails app
-  rails new MyApp
-  cd MyApp`
+  * new rails app where you want to not use 'test' and want to use mysql  
+  `rails new MyApp -T --skip-bundle -d mysql`  
+  * or optionally a default rails app  
+  `rails new MyApp`  
+  `cd MyApp`
 
 * edit your Gemfile  
   `gem 'i_reach'`
