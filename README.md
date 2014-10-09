@@ -50,12 +50,8 @@ Installation
 * configure your database(unless already configured) edit config/database.yml
 
 * create(unless already created) and migrate the database  
-  `rake db:create # this doesn't always work... you may need to use your normal client & set up permissions`
+  `rake db:create # this doesn't always work... you may need to use your normal client & set up permissions`  
   `rake db:migrate`
-
-* Create default admin menus for newsletter, mail_manager, and user administration  
-  `rake newsletter:create_auth_menus
-  rake mail_manager:create_auth_menus`
 
 * create bounce job to check for emails that have bounced from your mailings  
   `rake mail_manager:create_delayed_jobs`
