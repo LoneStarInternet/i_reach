@@ -1,0 +1,9 @@
+<p class="header">Editing admin_menu</p>
+
+<% form_tag :action => 'update', :id => @admin_menu do %>
+  <%= render :partial => 'form' %>
+  <%= submit_tag 'Edit', { :class => "submitbutton" } %>
+<% end %>
+
+<span class="off" onmouseover="this.className='on'" onmouseout="this.className='off'"><%= link_to 'Show', :action => 'show', :id => @admin_menu %></span> |
+<span class="off" onmouseover="this.className='on'" onmouseout="this.className='off'"><%= link_to 'Back', :action => 'list', :parent_id => @parent.nil? ? nil : @parent.id %></span>

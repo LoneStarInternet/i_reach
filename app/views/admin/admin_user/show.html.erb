@@ -1,0 +1,8 @@
+<% for column in AdminUser.content_columns %>
+<p>
+  <b><%= column.human_name %>:</b> <%=h @admin_user.send(column.name) %>
+</p>
+<% end %>
+
+<span class="off" onmouseover="this.className='on'" onmouseout="this.className='off'"><%= link_to 'Edit', :action => 'edit', :id => @admin_user %></span> |
+<span class="off" onmouseover="this.className='on'" onmouseout="this.className='off'"><%= link_to 'Back', :action => 'list' %></span>

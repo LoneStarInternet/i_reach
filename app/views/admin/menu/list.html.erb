@@ -1,0 +1,33 @@
+<p class="header">Listing admin_menus: <%= @parent.nil? ? 'Main Menu' : @parent.description %></p>
+<input type="hidden" name="parent_id" value="<%= @parent.nil? ? nil : @parent.id %>">
+
+<table cellspacing="0" cellpadding="1" class="descrip">
+  <tr>
+  <% for column in AdminMenu.content_columns %>
+    <th><%= column.human_name %></th>
+  <% end %>
+  </tr>
+  
+<% for admin_menu in @admin_menus %>
+  <tr class="off" onmouseover="this.className='on'" onmouseout="this.className='off'">
+  <% for column in AdminMenu.content_columns %>
+    <td><%=h admin_menu.send(column.name) %></td>
+  <% end %>
+    <td class="off" onmouseover="this.className='on'" onmouseout="this.className='off'"><%= link_to 'Show', :action => 'show', :id => admin_menu %></td>
+    <td class="off" onmouseover="this.className='on'" onmouseout="this.className='off'"><%= link_to 'Edit', :action => 'edit', :id => admin_menu %></td>
+    <td class="off" onmouseover="this.className='on'" onmouseout="this.className='off'"><%= link_to 'Children', :action => 'list', :parent_id => admin_menu.id %>
+    <td class="off" onmouseover="this.className='on'" onmouseout="this.className='off'"><%= link_to 'Delete', { :action => 'destroy', :id => admin_menu }, :confirm => 'Are you sure?', :method => :post %></td>
+  </tr>
+<% end %>
+</table>
+
+<span class="off" onmouseover="this.className='on'" onmouseout="this.className='off'"><%= will_paginate @admin_menus %></span>
+
+<br />
+
+<% if @parent.nil? or @parent.admin_menu_id.nil? %>
+<span class="off" onmouseover="this.className='on'" onmouseout="this.className='off'"><%= link_to 'New admin_menu', { :action => 'new', :parent_id => @parent.nil? ? nil : @parent.id } %> | </span>
+<% end %>
+<span class="off" onmouseover="this.className='on'" onmouseout="this.className='off'"><%= link_to( 'Renumber', { :action => 'renumber', :parent_id => @parent.nil? ? nil : @parent.id }, :confirm => 'This will renumber the menu order in multiples of 10. Do you really want to do this?' ) %> | </span>
+<span class="off" onmouseover="this.className='on'" onmouseout="this.className='off'"><%= link_to( 'Import/Export', { :action => 'imp_exp' }) %> | </span>
+<span class="off" onmouseover="this.className='on'" onmouseout="this.className='off'"><%= link_to( 'Back', { :action => 'list', :parent_id => @parent.nil? ? nil : @parent.admin_menu_id } ) %></span>

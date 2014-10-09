@@ -1,0 +1,24 @@
+<% content_tag :ul, html_options do %>
+  <% admin_nav_menu.reverse.each do |menu_item| %>
+    <% if menu_item.is_visible && menu_item.authorized(session[:admin][:user_id]) %>
+				
+      <% if menu_item.has_viewable_children?(session[:admin][:user_id])
+					  	menu_html_options = {:class => 'dir'}
+					 else 
+							menu_html_options = {}
+       end %>
+      <% content_tag :li, menu_html_options do %>
+					<% if menu_item.path.blank? %>
+						<% content_tag :span do %><%= menu_item.description %><% end %>
+					<% else %>
+						<%= link_to menu_item.description, "/#{menu_item.path}" %>
+					<% end %>
+			  <% if menu_item.has_viewable_children?(session[:admin][:user_id]) %>
+					 <%= render :partial => 'admin/admin_menu_navigation', 
+					 		 :locals => {:admin_nav_menu => menu_item.children, :html_options => {}}%>
+			  <% end %>
+			
+      <% end %>
+    <% end %>
+  <% end %>
+<% end %>

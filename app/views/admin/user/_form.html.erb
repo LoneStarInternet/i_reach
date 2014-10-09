@@ -1,0 +1,49 @@
+<%= error_messages_for 'user' %>
+
+<!--[form:user]-->
+<p><label for="user_username">Username</label><br/>
+<%= text_field 'user', 'username'  %></p>
+
+<p><label for="user_password">Site password</label><br/>
+<%= password_field 'user', 'password'  %></p>
+
+<p><label for="user_password_confirmation">Confirm password</label><br/>
+<%= password_field 'user', 'password_confirmation'  %></p>
+
+<p><label for="user_firstname">Firstname</label><br/>
+<%= text_field 'user', 'firstname'  %></p>
+
+<p><label for="user_lastname">Lastname</label><br/>
+<%= text_field 'user', 'lastname'  %></p>
+
+<p><label for="user_emaillist">Emaillist</label><br/>
+<select id="user_emaillist" name="user[emaillist]"><option value="false">False</option><option value="true">True</option></select></p>
+
+<p><label for="user_emailaddr">Emailaddr</label><br/>
+<%= text_field 'user', 'emailaddr'  %></p>
+
+<p><label for="user_birthday">Birthday</label><br/>
+<%= date_select 'user', 'birthday'  %></p>
+
+<p><label for="user_modifydate">Modifydate</label><br/>
+<%= datetime_select 'user', 'modifydate'  %></p>
+
+<p><label for="user_last_ip_address">Last ip address</label><br/>
+<%= text_field 'user', 'last_ip_address'  %></p>
+
+<p><label for="user_neveremail">Neveremail</label><br/>
+<select id="user_neveremail" name="user[neveremail]"><option value="false">False</option><option value="true">True</option></select></p>
+
+<p><label for="user_superuser">Superuser</label><br/>
+<select id="user_superuser" name="user[superuser]"><option value="false">False</option><option value="true">True</option></select></p>
+
+<p><label for="user_purchase_auth">Purchase auth</label><br/>
+<select id="user_purchase_auth" name="user[purchase_auth]"><option value="false">False</option><option value="true">True</option></select></p>
+
+<p><label for="user_company_id">Company</label><br/>
+<select name="user[company_id]">
+<%= options_from_collection_for_select @companies, :id, :name, @user.company_id %>
+</select></p>
+
+<!--[eoform:user]-->
+

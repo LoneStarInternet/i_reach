@@ -1,0 +1,11 @@
+<h1>Admin Menu Import/Export</h1>
+
+To export the current menu heirarchy to text <%= link_to "click here", :action => :export %>.<br/>
+<br/>
+<% form_tag :action => :import do %>
+To import a previous menu heirarchy from text, paste the text below and click submit. Warning, this will empty all existing admin menus from the database.<br/>
+<textarea name="import_text" rows="30" cols="80"></textarea><br/>
+<br/>
+<input type="submit" value="Submit">
+<% end %>
+

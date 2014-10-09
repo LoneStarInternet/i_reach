@@ -1,0 +1,8 @@
+<p class="header">New admin_menu</p>
+
+<% form_tag :action => 'create' do %>
+  <%= render :partial => 'form' %>
+  <%= submit_tag "Create", { :class => "submitbutton" } %>
+<% end %>
+
+<span class="off" onmouseover="this.className='on'" onmouseout="this.className='off'"><%= link_to 'Back', :action => 'list', :parent_id => @admin_menu.parent_id %></span>

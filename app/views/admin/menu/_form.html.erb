@@ -1,0 +1,28 @@
+<%= error_messages_for 'admin_menu' %>
+
+<!--[form:admin_menu]-->
+<%= hidden_field 'admin_menu', 'parent_id' %>
+
+<p><span class="title"><label for="admin_menu_description">Description</label></span><br/>
+<%= text_field 'admin_menu', 'description', { :class => "textbox" }  %></p>
+
+<p><span class="title"><label for="admin_menu_path">Path</label></span><br/>
+<%= text_field 'admin_menu', 'path', { :class => "textbox" }  %></p>
+
+<p><span class="title"><label for="admin_menu_menu_order">Menu order</label></span><br/>
+<%= text_field 'admin_menu', 'menu_order', { :class => "textbox" }  %></p>
+
+<p><%= check_box "admin_menu", "is_visible" %> <label for="admin_menu_is_visible">Is visible</label></p>
+
+<p><%= check_box "admin_menu", "auth_all" %> <label for="admin_menu_auth_all">Authorize All (all actions beneath this path are automatically allowed)</label></p>
+
+<p><span class="title"><label for="admin_menu_requires_class">Requires Class</label></span><br/>
+<%= text_field 'admin_menu', 'requires_class', { :class => "textbox" } %></p>
+
+<p><span class="title"><label for="admin_user_admin_menus">Admin Users</label></span><br/>
+<select class="dropdown" name='admin_user_ids[]' multiple>
+  <%= options_from_collection_for_select( @admin_users, 'id', 'name', @selected_user_ids ) %>
+</select></p>
+
+<!--[eoform:admin_menu]-->
+

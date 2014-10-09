@@ -7,7 +7,7 @@ require "i_reach/version"
 Gem::Specification.new do |s|
   s.name        = "i_reach"
   s.version     = IReach::VERSION
-  s.authors     = ["Christopher Hauboldt"]
+  s.authors     = ["Christopher Hauboldt", "Ken Biggs"]
   s.email       = ["chauboldt@lone-star.net"]
   s.homepage    = "http://lone-star.net"
   s.summary     = "Newsletter and Mailing List manager"
@@ -16,6 +16,8 @@ Gem::Specification.new do |s|
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.md"]
 
   s.add_dependency "rails", "~> 3.2.19"
+  s.add_dependency 'jquery-ui-rails'
+  s.add_dependency 'jquery-ui-themes'
   s.add_dependency "mail_manager"
   s.add_dependency "newsletter"
   s.add_development_dependency "mysql2"

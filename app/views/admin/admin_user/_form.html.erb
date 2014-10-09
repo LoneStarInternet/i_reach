@@ -1,0 +1,17 @@
+<%= error_messages_for 'admin_user' %>
+
+<!--[form:admin_user]-->
+<p><label for="admin_user_name">Name</label><br/>
+<%= text_field 'admin_user', 'name', { :class => "textbox" }  %></p>
+
+<p><span class="title"><label for="admin_user_password">Password</label></span><br/>
+<%= text_field 'admin_user', 'password', { :class => "textbox" }  %></p>
+
+<p><span class="title"><label for="admin_user_admin_menus">Admin Menus</label></span><br/>
+<select class="dropdown" name='admin_menu_ids[]' multiple>
+<!--  <%= options_from_collection_for_select( @admin_menus, 'id', 'description', @selected_menus ) %> -->
+  <%= options_from_admin_menu_for_multiselect( @admin_menus, @selected_menus ) %>
+</select></p>
+
+<!--[eoform:admin_user]-->
+

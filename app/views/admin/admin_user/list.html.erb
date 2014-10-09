@@ -1,0 +1,26 @@
+<p class="header">Listing admin_users</p>
+
+<table cellspacing="0" cellpadding="1" class="descrip">
+  <tr>
+  <% for column in AdminUser.content_columns %>
+    <th><%= column.human_name %></th>
+  <% end %>
+  </tr>
+  
+<% for admin_user in @admin_users %>
+  <tr class="off" onmouseover="this.className='on'" onmouseout="this.className='off'">
+  <% for column in AdminUser.content_columns %>
+    <td><%=h admin_user.send(column.name) %></td>
+  <% end %>
+    <td class="off" onmouseover="this.className='on'" onmouseout="this.className='off'"><%= link_to 'Show', :action => 'show', :id => admin_user %></td>
+    <td class="off" onmouseover="this.className='on'" onmouseout="this.className='off'"><%= link_to 'Edit', :action => 'edit', :id => admin_user %></td>
+    <td class="off" onmouseover="this.className='on'" onmouseout="this.className='off'"><%= link_to 'Delete', { :action => 'destroy', :id => admin_user }, :confirm => 'Are you sure?', :method => :post %></td>
+  </tr>
+<% end %>
+</table>
+
+<span class="off" onmouseover="this.className='on'" onmouseout="this.className='off'"><%= will_paginate @admin_users %></span>
+
+<br />
+
+<span class="off" onmouseover="this.className='on'" onmouseout="this.className='off'"><%= link_to 'New admin_user', :action => 'new' %></span>
