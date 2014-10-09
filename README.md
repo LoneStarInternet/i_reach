@@ -25,9 +25,19 @@ Installation
 
 * edit your Gemfile  
   `gem 'i_reach'`
+  * uncomment the ruby racer line ... or pick another JS gem   
+    `gem 'therubyracer', :platforms => :ruby`  
+  * add any other gems you like
 
 * bundle your gems  
   `bundle install`
+
+* configure your database(unless already configured) edit config/database.yml
+
+* NOTE: you may need to prefix everything with `bundle exec` assuming you're using bundler
+
+* create(unless already created) the database
+  `rake db:create # this doesn't always work... you may need to use your normal client & set up permissions`  
 
 * configure [mail_manager](https://github.com/LoneStarInternet/mail_manager/master/README.md)
   * generate migrations  
@@ -47,14 +57,13 @@ Installation
   * generate and configure the newsletter settings file at config/newsletter.yml: (replace table prefix with something... or nothing if you don't want to scope it)  
   `rake newsletter:default_app_config[table_prefix]`
 
-* configure your database(unless already configured) edit config/database.yml
-
-* create(unless already created) and migrate the database  
-  `rake db:create # this doesn't always work... you may need to use your normal client & set up permissions`  
+* migrate the database
   `rake db:migrate`
 
 * create bounce job to check for emails that have bounced from your mailings  
   `rake mail_manager:create_delayed_jobs`
 
-* mount IReach routes (you can say where by using at: /path)  
-  `mount IReach::Engine`
+* mount IReach routes (you can say where by using at: /path) in config/routes.rb   
+  `mount IReach::Engine => "/"`  
+  `root to: 'i_reach/welcome#index'`  
+
