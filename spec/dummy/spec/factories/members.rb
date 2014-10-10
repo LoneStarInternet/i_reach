@@ -2,9 +2,9 @@
 
 FactoryGirl.define do
   factory :member do
-    first "MyString"
-    last "MyString"
-    email "MyString"
-    nickname "MyString"
+    first {Faker::Name.first_name}
+    last {Faker::Name.last_name}
+    email {Faker::Internet.safe_email}
+    nickname {Faker::Name.first_name}
   end
 end

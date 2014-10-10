@@ -8,8 +8,8 @@ gemspec
 # jquery-rails is used by the dummy application
 gem "jquery-rails"
 
-#gem 'mail_manager', path: '/home/chrisboy/Projects/LSI/mail_manager'
-#gem 'newsletter', path: '/home/chrisboy/Projects/LSI/newsletter'
+gem 'mail_manager', path: '/home/chrisboy/Projects/LSI/mail_manager'
+gem 'newsletter', path: '/home/chrisboy/Projects/LSI/newsletter'
 
 # Testing Gems
 gem "rspec-rails", "~>2.14"
@@ -27,6 +27,8 @@ gem 'cucumber-rails', require: false
 gem 'spring'
 gem 'puma'
 gem 'quiet_assets'
+gem 'spring-commands-rspec'
+gem 'spring-commands-cucumber'
 # Declare any dependencies that are still in development here instead of in
 # your gemspec. These might include edge Rails or gems from your path or
 # Git. Remember to move these dependencies to your gemspec before releasing

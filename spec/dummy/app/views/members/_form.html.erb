@@ -27,6 +27,7 @@
     <%= f.label :nickname %><br />
     <%= f.text_field :nickname %>
   </div>
+  <%= render partial: "mail_manager/subscriptions/subscriptions_divs", locals: {contactable_form: f} %>
   <div class="actions">
     <%= f.submit %>
   </div>

@@ -39,7 +39,7 @@ Installation
 * create(unless already created) the database
   `rake db:create # this doesn't always work... you may need to use your normal client & set up permissions`  
 
-* configure [mail_manager](https://github.com/LoneStarInternet/mail_manager/master/README.md)
+* configure [mail_manager](https://github.com/LoneStarInternet/mail_manager)
   * generate migrations  
   `rake mail_manager:import_migrations`
 
@@ -50,7 +50,7 @@ Installation
   * generate and configure the mail manager settings file at config/mail_manager.yml: (replace table prefix with something... or nothing if you don't want to scope it)  
   `rake mail_manager:default_app_config[table_prefix]`
 
-* configure [newsletter](https://github.com/LoneStarInternet/newsletter/master/README.md)
+* configure [newsletter](https://github.com/LoneStarInternet/newsletter)
   * generate migrations  
   `rake newsletter:import_migrations`
 
