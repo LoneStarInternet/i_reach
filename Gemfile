@@ -8,9 +8,6 @@ gemspec
 # jquery-rails is used by the dummy application
 gem "jquery-rails"
 
-gem 'mail_manager', path: '/home/chrisboy/Projects/LSI/mail_manager'
-gem 'newsletter', path: '/home/chrisboy/Projects/LSI/newsletter'
-
 # Testing Gems
 gem "rspec-rails", "~>2.14"
 gem "factory_girl_rails", "~>4.3"
