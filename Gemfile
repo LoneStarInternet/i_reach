@@ -30,6 +30,9 @@ gem 'spring-commands-cucumber'
 # your gemspec. These might include edge Rails or gems from your path or
 # Git. Remember to move these dependencies to your gemspec before releasing
 # your gem to rubygems.org.
+#
+gem 'mail_manager', path: '/home/chrisboy/Projects/LSI/mail_manager'
+gem 'newsletter', path: '/home/chrisboy/Projects/LSI/newsletter'
 
 # To use debugger
 # gem 'debugger'

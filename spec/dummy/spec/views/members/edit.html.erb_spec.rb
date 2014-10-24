@@ -2,12 +2,7 @@ require 'spec_helper'
 
 describe "members/edit" do
   before(:each) do
-    @member = assign(:member, stub_model(Member,
-      :first => "MyString",
-      :last => "MyString",
-      :email => "MyString",
-      :nickname => "MyString"
-    ))
+    @member = FactoryGirl.create(:member)
   end
 
   it "renders the edit member form" do
