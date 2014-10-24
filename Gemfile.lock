@@ -9,8 +9,9 @@ PATH
       newsletter
       rails (~> 3.2.19)
 
-PATH
-  remote: /home/chrisboy/Projects/LSI/mail_manager
+GIT
+  remote: ssh://git@bender.lnstar.com/var/git/mail_manager.git
+  revision: 6fb1fc92bc075df28a87c121fc11855262d84210
   specs:
     mail_manager (0.1.4)
       daemons
@@ -23,8 +24,9 @@ PATH
       will_paginate
       with_lock
 
-PATH
-  remote: /home/chrisboy/Projects/LSI/newsletter
+GIT
+  remote: ssh://git@bender.lnstar.com/var/git/newsletter.git
+  revision: 9efea287957805437bf38165e3648b8c77b34398
   specs:
     newsletter (0.1.2)
       acts_as_list

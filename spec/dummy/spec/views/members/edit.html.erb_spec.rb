@@ -3,6 +3,7 @@ require 'spec_helper'
 describe "members/edit" do
   before(:each) do
     @member = FactoryGirl.create(:member)
+    @mailing_list = FactoryGirl.create(:mailing_list)
   end
 
   it "renders the edit member form" do
