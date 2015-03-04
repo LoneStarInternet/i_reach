@@ -40,6 +40,9 @@ Installation
   `rake db:create # this doesn't always work... you may need to use your normal client & set up permissions`  
 
 * configure [mail_manager](https://github.com/LoneStarInternet/mail_manager)
+  * generate and configure the mail manager settings file at config/mail_manager.yml: (replace table prefix with something... or nothing if you don't want to scope it)  
+  `rake mail_manager:default_app_config[table_prefix]`
+
   * generate migrations  
   `rake mail_manager:import_migrations`
 
@@ -47,15 +50,13 @@ Installation
   `rails g delayed_job:active_record`
 
   * NOTE: you need to create an email account that will receive bounces from your mailings(and allow POP)... configure in the following file:
-  * generate and configure the mail manager settings file at config/mail_manager.yml: (replace table prefix with something... or nothing if you don't want to scope it)  
-  `rake mail_manager:default_app_config[table_prefix]`
 
 * configure [newsletter](https://github.com/LoneStarInternet/newsletter)
-  * generate migrations  
-  `rake newsletter:import_migrations`
-
   * generate and configure the newsletter settings file at config/newsletter.yml: (replace table prefix with something... or nothing if you don't want to scope it)  
   `rake newsletter:default_app_config[table_prefix]`
+
+  * generate migrations  
+  `rake newsletter:import_migrations`
 
 * migrate the database
   `rake db:migrate`
