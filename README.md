@@ -49,7 +49,7 @@ Installation
   * generate delayed_jobs (this is the only job runner we support right now)  
   `rails g delayed_job:active_record`
 
-  * NOTE: you need to create an email account that will receive bounces from your mailings(and allow POP)... configure in the following file:
+  * NOTE: you need to create an email account that will receive bounces from your mailings(and allow POP)... configure in config/mail_manager.yml
 
 * configure [newsletter](https://github.com/LoneStarInternet/newsletter)
   * generate and configure the newsletter settings file at config/newsletter.yml: (replace table prefix with something... or nothing if you don't want to scope it)  
@@ -68,3 +68,8 @@ Installation
   `mount IReach::Engine => "/"`  
   `root to: 'i_reach/welcome#index'`  
 
+* if you mount at "/", you probably need to remove public/index.html
+  `rm public/index.html`
+
+* either create a newsletter design from scratch or you can import an example:
+  `rake newsletter:import_example_design`
