@@ -33,8 +33,8 @@ gem 'spring-commands-cucumber'
 #
 #gem 'mail_manager', git: "ssh://git@bender.lnstar.com/var/git/mail_manager.git"
 #gem 'newsletter', git: "ssh://git@bender.lnstar.com/var/git/newsletter.git"
-gem 'mail_manager', path: "/home/chrisboy/Projects/LSI/mail_manager/"
-gem 'newsletter', path: "/home/chrisboy/Projects/LSI/newsletter/"
+#gem 'mail_manager', path: "/home/chrisboy/Projects/LSI/mail_manager/"
+#gem 'newsletter', path: "/home/chrisboy/Projects/LSI/newsletter/"
 
 # To use debugger
 # gem 'debugger'
