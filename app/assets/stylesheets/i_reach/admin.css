@@ -7,6 +7,11 @@ body {
    background:#fdba59;
 }
 
+#top {
+  background-image: url('/assets/i_reach/topMid.gif');
+  height: 85px;
+}
+
 img {
    display: block;
 }
@@ -30,6 +35,15 @@ img {
 h1 {
    font-size: 16pt;
    color: #599c41;
+}
+
+#page_content {
+  overflow: hidden;
+  background-image: url('/assets/i_reach/1midRight.gif');
+  background-repeat: repeat-y;
+  background-position: right;
+  padding: 10px 40px 10px 10px;
+  min-height: 300px;
 }
 
 /*Content------------------------------------------------*/
