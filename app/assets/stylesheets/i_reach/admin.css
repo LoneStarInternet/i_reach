@@ -10,6 +10,7 @@ body {
 #top {
   background-image: url('/assets/i_reach/topMid.gif');
   height: 85px;
+  min-width: 766px;
 }
 
 img {
