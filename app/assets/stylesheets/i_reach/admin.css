@@ -129,72 +129,73 @@ input, select, textarea {
 
 /*Input style buttons within table*/
 
+
 input.button {
-    width: auto;
-    padding-left: 8px;
-    padding-bottom: 3px;
-    padding-right: 5px;
-    /* Firefox wants the margin below */
-    margin-right: 5px;
-    font-size: 11pt;
+    background: #ffd04f;
+    background-image: -webkit-linear-gradient(top, #ffd04f, #faeabe);
+    background-image: -moz-linear-gradient(top, #ffd04f, #faeabe);
+    background-image: -ms-linear-gradient(top, #ffd04f, #faeabe);
+    background-image: -o-linear-gradient(top, #ffd04f, #faeabe);
+    background-image: linear-gradient(to bottom, #ffd04f, #faeabe);
+    -webkit-border-radius: 12;
+    -moz-border-radius: 12;
+    border-radius: 10px;
+    padding: 0 10px;
+    border: solid #669421 1px;
     text-decoration: none;
-    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11pt;
     font-weight: bold;
-    border: 0;
-    background: url(/assets/i_reach/button_imgs/button1.gif) no-repeat;
     color: #555;
-    height: 22px;
-    overflow: visible; /* supposed to fix IE spacing */
-    /* used to catch the buttonEnding */
-    position: relative;
-    cursor: pointer;
+    margin-right: 10px;
+    cursor: pointer; 
 }
 
 input.button:hover {
-   color: #a1ac85;
+    background: #bafc56;
+    background-image: -webkit-linear-gradient(top, #bafc56, #f7ffeb);
+    background-image: -moz-linear-gradient(top, #bafc56, #f7ffeb);
+    background-image: -ms-linear-gradient(top, #bafc56, #f7ffeb);
+    background-image: -o-linear-gradient(top, #bafc56, #f7ffeb);
+    background-image: linear-gradient(to bottom, #bafc56, #f7ffeb);
+    text-decoration: none;
 }
 
 a.button:link, a.button:visited {
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 3px;
-    padding-bottom: 3px;
+/*  background: #a6f038;
+    background-image: -webkit-linear-gradient(top, #a6f038, #f4ffe3);
+    background-image: -moz-linear-gradient(top, #a6f038, #f4ffe3);
+    background-image: -ms-linear-gradient(top, #a6f038, #f4ffe3);
+    background-image: -o-linear-gradient(top, #a6f038, #f4ffe3);
+    background-image: linear-gradient(to bottom, #a6f038, #f4ffe3);*/
+    /* freaky orange background */
+    background: #ffd04f;
+    background-image: -webkit-linear-gradient(top, #ffd04f, #faeabe);
+    background-image: -moz-linear-gradient(top, #ffd04f, #faeabe);
+    background-image: -ms-linear-gradient(top, #ffd04f, #faeabe);
+    background-image: -o-linear-gradient(top, #ffd04f, #faeabe);
+    background-image: linear-gradient(to bottom, #ffd04f, #faeabe);
+    -webkit-border-radius: 10;
+    -moz-border-radius: 10;
+    border-radius: 10px;
+    padding: 2px 10px 1px 10px;
+    border: solid #669421 1px;
+    text-decoration: none; 
     font-size: 11pt;
     font-weight: bold;
-    text-decoration: none;
-    border: 0;
-    background: url(/assets/i_reach/button_imgs/button1.gif) no-repeat;
     color: #555;
-    height: 22px;
-    /* used to catch the buttonEnding */
-    position: relative;
+    margin-right: 10px;
+    /* do I need this? */
     cursor: pointer; 
 }
 
 a.button:hover {
-   color: #efaa45;
-}
-
-div.buttonEnding {
-    position: absolute;
-    display: inline; 
-/* Firefox really wants -7px margin-left  and somehow there is space to the right of the button text in IE*/
-    margin-left: -10px; 
-    /* Firefox doesn't like the  margin-top below */
-    margin-top:  6px;
-    width: 17px;
-    height: 22px;
-    background: url(/assets/i_reach/button_imgs/end1.gif) no-repeat;
-}
-
-div.linkbuttonEnding{
-    position: absolute;
-    display: inline;
-    margin-left: -6px;
-    margin-top: -3px;
-    width: 17px;
-    height: 22px;
-    background: url(/assets/i_reach/button_imgs/end1.gif) no-repeat;
+    background: #bafc56;
+    background-image: -webkit-linear-gradient(top, #bafc56, #f7ffeb);
+    background-image: -moz-linear-gradient(top, #bafc56, #f7ffeb);
+    background-image: -ms-linear-gradient(top, #bafc56, #f7ffeb);
+    background-image: -o-linear-gradient(top, #bafc56, #f7ffeb);
+    background-image: linear-gradient(to bottom, #bafc56, #f7ffeb);
+    text-decoration: none;
 }
 
 .newsletter_parts_group {
