@@ -10,6 +10,38 @@ PATH
       newsletter (~> 3.0)
       rails (~> 3.2)
 
+GIT
+  remote: ssh://git@bender.lnstar.com/var/git/mail_manager.git
+  revision: 07c0e3284c74b13da3403637ed303a087cc116f2
+  branch: rails3.2.x
+  specs:
+    mail_manager (3.0.0)
+      cancancan (~> 1.9)
+      daemons (~> 1.1)
+      delayed_job (~> 4)
+      delayed_job_active_record (~> 4)
+      dynamic_form (~> 1.1)
+      mini_magick (~> 4.1)
+      rails (~> 3.2)
+      unix_utils (~> 0.0)
+      will_paginate (~> 3.0)
+      with_lock (~> 0.1)
+
+GIT
+  remote: ssh://git@bender.lnstar.com/var/git/newsletter.git
+  revision: ed12071dae29c8b756300e61a56c1e0ff7abc9ff
+  branch: rails3.2.x
+  specs:
+    newsletter (3.0.2)
+      acts_as_list (~> 0.5)
+      cancancan (~> 1.9)
+      carrierwave (~> 0.10)
+      dynamic_form (~> 1.1)
+      mini_magick (~> 4.1)
+      nested_form (~> 0.3)
+      rails (~> 3.2)
+      will_paginate (~> 3.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -139,17 +171,6 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
-    mail_manager (3.0.0)
-      cancancan (~> 1.9)
-      daemons (~> 1.1)
-      delayed_job (~> 4)
-      delayed_job_active_record (~> 4)
-      dynamic_form (~> 1.1)
-      mini_magick (~> 4.1)
-      rails (~> 3.2)
-      unix_utils (~> 0.0)
-      will_paginate (~> 3.0)
-      with_lock (~> 0.1)
     method_source (0.8.2)
     mime-types (1.25.1)
     mini_magick (4.1.0)
@@ -159,15 +180,6 @@ GEM
     multi_xml (0.5.5)
     mysql2 (0.3.16)
     nested_form (0.3.2)
-    newsletter (3.0.2)
-      acts_as_list (~> 0.5)
-      cancancan (~> 1.9)
-      carrierwave (~> 0.10)
-      dynamic_form (~> 1.1)
-      mini_magick (~> 4.1)
-      nested_form (~> 0.3)
-      rails (~> 3.2)
-      will_paginate (~> 3.0)
     nokogiri (1.6.3.1)
       mini_portile (= 0.6.0)
     polyglot (0.3.5)
@@ -270,7 +282,9 @@ DEPENDENCIES
   guard-rspec
   i_reach!
   jquery-rails
+  mail_manager!
   mysql2 (~> 0.3)
+  newsletter!
   post_office
   pry-rails
   puma
