@@ -1,11 +1,14 @@
 .bundle/
 log/*.log
 pkg/
+.DS_Store
 *.gem
 spec/dummy/db/*.sqlite3
 spec/dummy/log/*.log
 spec/dummy/tmp/
 spec/dummy/.sass-cache
 spec/dummy/designs
+spec/dummy/newsletters
+spec/dummy/public
 spec/dummy/config/database.yml
 

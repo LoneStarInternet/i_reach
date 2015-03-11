@@ -12,27 +12,27 @@
 <body>
 <div id="top"><%= image_tag "i_reach/iReach_logo.gif", width: "269", height:"85", style: "float: left;" %><%= image_tag "i_reach/TopCenter.gif", width: "435", height: "85", style: "float: left;" %><%= image_tag "i_reach/TopRight.gif", width: "62", height: "85", style: "float: right;" %>&nbsp;</div>
 <div style="background-color: #fff;">
-            <div id="menu">
-              <ul>
-                <li><a href="/admin">Home</a></li>
-                <li><a href="#">Setup</a>
-                  <ul>
-                    <li>Admin Menus</a></li>
-                    <li>Admin Users</a></li>
-                    <li><a href="/admin/newsletter/designs?menu_id=11">Newsletter Designs</a></li>
-                  </ul>
-                </li>
-                <li><a href="/admin/newsletter/newsletters">Newsletters</a></li>
-                <li>Mailings
-                  <ul>
-                    <li><a href="/admin/mail_manager/contacts?menu_id=11">Contacts</a></li>
-                    <li><a href="/admin/mail_manager/mailings?menu_id=11">Mailings</a></span><br>
-                    <li><a href="/admin/mail_manager/mailing_lists?menu_id=11">Mailing Lists</a></li>
-                    <li><a href="/admin/mail_manager/bounces?menu_id=11">Bounces</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
+  <div id="menu">
+    <ul>
+      <li><a href="/admin">Home</a></li>
+      <li><a href="#">Setup</a>
+        <ul>
+          <li>Admin Menus</a></li>
+          <li>Admin Users</a></li>
+          <li><a href="/admin/newsletter/designs?menu_id=11">Newsletter Designs</a></li>
+        </ul>
+      </li>
+      <li><a href="/admin/newsletter/newsletters">Newsletters</a></li>
+      <li>Mailings
+        <ul>
+          <li><a href="/admin/mail_manager/contacts?menu_id=11">Contacts</a></li>
+          <li><a href="/admin/mail_manager/mailings?menu_id=11">Mailings</a></span><br>
+          <li><a href="/admin/mail_manager/mailing_lists?menu_id=11">Mailing Lists</a></li>
+          <li><a href="/admin/mail_manager/bounces?menu_id=11">Bounces</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
 <div id="page_content">
       <% flash.each do |name, msg| -%>
         <%= content_tag :div, msg, :id => "flash_#{name}" %>
