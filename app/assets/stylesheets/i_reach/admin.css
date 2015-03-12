@@ -38,6 +38,12 @@ h1 {
    color: #599c41;
 }
 
+h2.list_group {
+  padding-bottom: 0;
+  margin-bottom: 0;
+  font-size: 12pt;
+}
+
 #page_content {
   overflow: hidden;
   background-image: url('/assets/i_reach/MidRight.gif');
@@ -224,6 +230,7 @@ a.button:hover {
     padding: 0 5px 5px 15px;
     border: thin dashed #599c41;
     background-color: #eee;
+    width: 755px;
 }
 
 a:link {
@@ -243,4 +250,12 @@ a:hover {
 .submit_button {
   width: 500px;
   text-align: right;
+}
+
+.mailing_lists_group {
+  margin-top: 10px;
+  padding: 0 5px 5px 15px;
+  border: thin dashed black;
+  background-color: #eee;
+  width: 500px;
 }
