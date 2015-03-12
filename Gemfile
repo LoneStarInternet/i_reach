@@ -9,15 +9,13 @@ gemspec
 gem "jquery-rails"
 
 # Testing Gems
-gem "rspec-rails", "~>2.14"
+gem "rspec-rails", "~>3.2"
 gem "factory_girl_rails", "~>4.3"
 gem "faker"
 gem "sqlite3"
 gem 'post_office'
 gem 'foreman'
 gem 'database_cleaner'
-gem 'guard-rspec'
-gem 'guard-livereload'
 gem 'pry-rails'
 gem 'delayed_job_active_record'
 gem 'cucumber-rails', require: false
@@ -26,6 +24,8 @@ gem 'puma'
 gem 'quiet_assets'
 gem 'spring-commands-rspec'
 gem 'spring-commands-cucumber'
+gem "rspec-activemodel-mocks"
+
 # Declare any dependencies that are still in development here instead of in
 # your gemspec. These might include edge Rails or gems from your path or
 # Git. Remember to move these dependencies to your gemspec before releasing

@@ -1,7 +1,7 @@
 ---
 common:
   designs_path: <%= "#{Rails.root}/newsletters" %>
-  asset_path: public/newsletter_assets
+  asset_path: newsletter_assets
   path_prefix: /admin
   table_prefix: newsletter_
-  site_url: http://lvh.me
+  site_url: http://member.dev

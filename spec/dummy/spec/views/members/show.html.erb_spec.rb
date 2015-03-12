@@ -1,8 +1,8 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe "members/show" do
+RSpec.describe "members/show", :type => :view do
   before(:each) do
-    @member = assign(:member, stub_model(Member,
+    @member = assign(:member, Member.create!(
       :first => "First",
       :last => "Last",
       :email => "Email",
@@ -12,10 +12,9 @@ describe "members/show" do
 
   it "renders attributes in <p>" do
     render
-    # Run the generator again with the --webrat flag if you want to use webrat matchers
-    rendered.should match(/First/)
-    rendered.should match(/Last/)
-    rendered.should match(/Email/)
-    rendered.should match(/Nickname/)
+    expect(rendered).to match(/First/)
+    expect(rendered).to match(/Last/)
+    expect(rendered).to match(/Email/)
+    expect(rendered).to match(/Nickname/)
   end
 end
