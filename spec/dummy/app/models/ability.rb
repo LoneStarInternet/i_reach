@@ -3,7 +3,8 @@ if defined?(CanCan::Ability)
     include CanCan::Ability
   
     def initialize(user)
-      true if user.present?
+      eval Newsletter.abilities
+      eval MailManager.abilities
     end
   end
 end
