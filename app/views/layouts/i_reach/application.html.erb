@@ -22,7 +22,7 @@
       </li>
       <%= content_tag(:li, link_to('Newsletters', newsletter.newsletters_path)) if can?(:manage, Newsletter::Newsletter) %>
       <li>Mailings
-        <ul id='mailings_submenu' <%= ' style="display:none"' unless request.path =~ %r|/mail_manager| %>>>
+        <ul id='mailings_submenu' <%= ' style="display:none"' unless request.path =~ %r|/mail_manager| %>>
           <%= content_tag(:li, link_to('Contacts', mail_manager.contacts_path)) if can?(:manage, MailManager::Contact) %>
           <%= content_tag(:li, link_to('Mailings', mail_manager.mailings_path)) if can?(:manage, MailManager::Mailing) %>
           <%= content_tag(:li, link_to('Mailing Lists', mail_manager.mailing_lists_path)) if can?(:manage, MailManager::MailingList) %>
