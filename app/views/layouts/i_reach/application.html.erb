@@ -16,19 +16,17 @@
     <ul>
       <li><a href="/admin">Home</a></li>
       <li><a href="#">Setup</a>
-        <ul>
-          <li>Admin Menus</a></li>
-          <li>Admin Users</a></li>
-          <li><a href="/admin/newsletter/designs?menu_id=11">Newsletter Designs</a></li>
+        <ul id='setup_submenu' <%= ' style="display:none"' unless request.path =~ %r|/newsletter/designs| %>>
+          <%= content_tag(:li, link_to('Newsletter Designs', newsletter.designs_path)) if can?(:manage, Newsletter::Design) %>
         </ul>
       </li>
-      <li><a href="/admin/newsletter/newsletters">Newsletters</a></li>
+      <%= content_tag(:li, link_to('Newsletters', newsletter.newsletters_path)) if can?(:manage, Newsletter::Newsletter) %>
       <li>Mailings
-        <ul>
-          <li><a href="/admin/mail_manager/contacts?menu_id=11">Contacts</a></li>
-          <li><a href="/admin/mail_manager/mailings?menu_id=11">Mailings</a></span><br>
-          <li><a href="/admin/mail_manager/mailing_lists?menu_id=11">Mailing Lists</a></li>
-          <li><a href="/admin/mail_manager/bounces?menu_id=11">Bounces</a></li>
+        <ul id='mailings_submenu' <%= ' style="display:none"' unless request.path =~ %r|/mail_manager| %>>>
+          <%= content_tag(:li, link_to('Contacts', mail_manager.contacts_path)) if can?(:manage, MailManager::Contact) %>
+          <%= content_tag(:li, link_to('Mailings', mail_manager.mailings_path)) if can?(:manage, MailManager::Mailing) %>
+          <%= content_tag(:li, link_to('Mailing Lists', mail_manager.mailing_lists_path)) if can?(:manage, MailManager::MailingList) %>
+          <%= content_tag(:li, link_to('Bounces', mail_manager.bounces_path)) if can?(:manage, MailManager::Bounce) %>
         </ul>
       </li>
     </ul>

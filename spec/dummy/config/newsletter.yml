@@ -1,7 +1,8 @@
 ---
 common:
-  designs_path: <%= "#{Rails.root}/newsletters" %>
-  asset_path: newsletter_assets
-  path_prefix: /admin
   table_prefix: newsletter_
-  site_url: http://member.dev
+  designs_path: <%= "#{Rails.root}/newsletters" %>
+  site_url: http://ireach.dev
+  asset_path: newsletter_assets
+  #designs_require_authentication: true
+  #newsletters_require_authentication: true

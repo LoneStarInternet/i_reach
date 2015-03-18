@@ -1,6 +1,6 @@
 ---
 common:
-  site_url: http://lvh.me
+  site_url: http://ireach.dev
   unsubscribe_path: /listmgr
   dont_include_images_domains:
     - yahoo.com
@@ -17,3 +17,6 @@ common:
     login: test
     password: secret
     pop_server: pop.example.com
+  #requires_authentication: true
+  #authorized_roles:
+  #  - admin
