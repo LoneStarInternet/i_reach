@@ -2,6 +2,7 @@
 log/*.log
 pkg/
 .DS_Store
+.Gemfile.lock*
 *.gem
 spec/dummy/db/*.sqlite3
 spec/dummy/log/*.log
