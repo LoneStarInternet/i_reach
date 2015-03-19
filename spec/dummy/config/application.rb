@@ -9,6 +9,7 @@ require "sprockets/railtie"
 # require "rails/test_unit/railtie"
 
 Bundler.require(*Rails.groups)
+
 require "mail_manager"
 require "newsletter"
 require "i_reach"
@@ -64,4 +65,3 @@ module Dummy
     config.assets.version = '1.0'
   end
 end
-

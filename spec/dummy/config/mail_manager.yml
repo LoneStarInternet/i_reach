@@ -20,3 +20,6 @@ common:
   #requires_authentication: true
   #authorized_roles:
   #  - admin
+test: 
+  site_url: http://ireach.lvh.me:4700
+    

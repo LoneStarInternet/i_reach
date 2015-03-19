@@ -9,10 +9,11 @@ Requirements
 * Rails 3.2.x
 * Ruby 1.9.3-x
 * [Bundler](http://bundler.io)
+* [Delayed::Job](https://github.com/collectiveidea/delayed_job/) - (currently the only queue job runner we support)
 
 Optional Dependencies
 ---------------------
-* [RVM](http://rvm.io)
+* [RVM](http://rvm.io) - How we control our ruby environment(mainly concerns development)
 
 Installation
 -----------

@@ -1,0 +1,3 @@
+with_lock:    script/with_lock run
+post_office:  script/post_office run 
+web:          spring rails s
