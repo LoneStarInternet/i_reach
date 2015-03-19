@@ -45,9 +45,9 @@ group :post_office do
   gem 'post_office'
 end
 
-#
-#gem 'mail_manager', git: "ssh://git@bender.lnstar.com/var/git/mail_manager.git", branch: "rails3.2.x"
-#gem 'newsletter', git: "ssh://git@bender.lnstar.com/var/git/newsletter.git", branch: "rails3.2.x"
+# Set gems for local testing
+gem 'mail_manager', git: "ssh://git@bender.lnstar.com/var/git/mail_manager.git", branch: "rails3.2.x"
+gem 'newsletter', git: "ssh://git@bender.lnstar.com/var/git/newsletter.git", branch: "rails3.2.x"
 #gem 'mail_manager', path: "/home/chrisboy/Projects/LSI/mail_manager/"
 #gem 'newsletter', path: "/home/chrisboy/Projects/LSI/newsletter/"
 
