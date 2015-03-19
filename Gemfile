@@ -39,20 +39,17 @@ group :test do
   gem 'cucumber-rails', require: false
 end
 
-# Declare any dependencies that are still in development here instead of in
-# your gemspec. These might include edge Rails or gems from your path or
-# Git. Remember to move these dependencies to your gemspec before releasing
-# your gem to rubygems.org.
-#
-#gem 'mail_manager', git: "ssh://git@bender.lnstar.com/var/git/mail_manager.git", branch: "rails3.2.x"
-#gem 'newsletter', git: "ssh://git@bender.lnstar.com/var/git/newsletter.git", branch: "rails3.2.x"
-gem 'mail_manager', path: "/home/chrisboy/Projects/LSI/mail_manager/"
-gem 'newsletter', path: "/home/chrisboy/Projects/LSI/newsletter/"
-
-# To use debugger
-# gem 'debugger'
+# required for tests... can be used to look at mail with a mail client without real smtp
 group :post_office do
   gem 'dotenv'
   gem 'post_office'
 end
 
+#
+#gem 'mail_manager', git: "ssh://git@bender.lnstar.com/var/git/mail_manager.git", branch: "rails3.2.x"
+#gem 'newsletter', git: "ssh://git@bender.lnstar.com/var/git/newsletter.git", branch: "rails3.2.x"
+#gem 'mail_manager', path: "/home/chrisboy/Projects/LSI/mail_manager/"
+#gem 'newsletter', path: "/home/chrisboy/Projects/LSI/newsletter/"
+
+# To use debugger
+# gem 'debugger'
