@@ -54,7 +54,6 @@ RSpec.describe MembersController, :type => :controller do
 
   describe "GET #new" do
     it "assigns a new member as @member" do
-      pending "Need to add auth stuff"
       get :new, {}, valid_session
       expect(assigns(:member)).to be_a_new(Member)
     end
