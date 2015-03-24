@@ -8,7 +8,7 @@ Feature: Managing a member updates its contact and subscription data
     And a mailing list "The Dark Side" exists
 
 Scenario: I can add a subscription to a member
-  When I go to member "Bob Dole"'s edit page
+  When I visit member "Bob Dole"'s edit page
   Then I should see "The Dark Side"
   When I check "The Dark Side"
   And I click the "Update Member" button

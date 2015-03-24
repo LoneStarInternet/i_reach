@@ -5,7 +5,7 @@ Given(/^a member "(.*?)" exists with email "(.*?)"$/) do |name, email|
   Member.create!(first: first_name, last: last_name, email: email)
 end
 
-When(/^I go to member "(.*?)"'s edit page$/) do |name|
+When(/^I visit member "(.*?)"'s edit page$/) do |name|
   last_name = name.split(/\s+/).last
   first_name = name.split(/\s+/)[0..-2].join(' ')
   member = Member.where("last=? and first=?",last_name,first_name).first
