@@ -12,6 +12,11 @@ body {
   height: 85px;
   min-width: 766px;
 }
+
+.menu_expand {
+  cursor: pointer;
+}
+
 /*
 img {
    display: block;

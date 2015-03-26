@@ -15,13 +15,13 @@
   <div id="menu">
     <ul>
       <li><a href="/admin">Home</a></li>
-      <li><span onClick="$('#setup_submenu').toggle();return false">Setup</span>
+      <li><span onClick="$('#setup_submenu').toggle();return false" class="menu_expand">Setup</span>
         <ul id='setup_submenu' <%= ' style="display:none"'.html_safe unless request.path =~ %r#/newsletter/designs|setup# %>>
           <%= content_tag(:li, link_to('Newsletter Designs', news.designs_path)) if can?(:manage, Newsletter::Design) %>
         </ul>
       </li>
       <%= content_tag(:li, link_to('Newsletters', news.newsletters_path)) if can?(:manage, Newsletter::Newsletter) %>
-      <li><span onClick="$('#mailings_submenu').toggle();return false">Mailings</span>
+      <li><span onClick="$('#mailings_submenu').toggle();return false" class="menu_expand">Mailings</span>
         <ul id='mailings_submenu' <%= ' style="display:none"'.html_safe unless request.path =~ %r|/mail_manager| %>>
           <%= content_tag(:li, link_to('Contacts', mail_manager.contacts_path)) if can?(:manage, MailManager::Contact) %>
           <%= content_tag(:li, link_to('Mailings', mail_manager.mailings_path)) if can?(:manage, MailManager::Mailing) %>
