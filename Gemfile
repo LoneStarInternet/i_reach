@@ -10,6 +10,7 @@ gemspec
 gem "jquery-rails"
 gem "devise"
 gem 'jquery-ui-rails'
+gem "delayed_job_web"
 
 # Testing Gems
 gem "sqlite3"
@@ -46,10 +47,10 @@ group :post_office do
 end
 
 # Set gems for local testing
-gem 'mail_manager', git: "ssh://git@bender.lnstar.com/var/git/mail_manager.git", branch: "rails3.2.x"
-gem 'newsletter', git: "ssh://git@bender.lnstar.com/var/git/newsletter.git", branch: "rails3.2.x"
-#gem 'mail_manager', path: "/home/chrisboy/Projects/LSI/mail_manager/"
-#gem 'newsletter', path: "/home/chrisboy/Projects/LSI/newsletter/"
+#gem 'mail_manager', git: "ssh://git@bender.lnstar.com/var/git/mail_manager.git", branch: "rails3.2.x"
+#gem 'newsletter', git: "ssh://git@bender.lnstar.com/var/git/newsletter.git", branch: "rails3.2.x"
+gem 'mail_manager', path: "/home/chrisboy/Projects/LSI/mail_manager/"
+gem 'newsletter', path: "/home/chrisboy/Projects/LSI/newsletter/"
 
 # To use debugger
 # gem 'debugger'

@@ -1,3 +1,4 @@
 with_lock:    script/with_lock run
 post_office:  script/post_office run 
+delayed_job:  script/delayed_job run
 web:          spring rails s

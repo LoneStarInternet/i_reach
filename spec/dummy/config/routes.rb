@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   mount IReach::Engine => "/admin"
 
   root to: 'i_reach/welcome#index'
+  match "/delayed_job" => DelayedJobWeb, :anchor => false, via: [:get, :post]
 end
