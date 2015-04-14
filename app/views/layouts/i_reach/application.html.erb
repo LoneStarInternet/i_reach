@@ -21,7 +21,7 @@
         </ul>
       </li>
       <%= content_tag(:li, link_to('Newsletters', news.newsletters_path)) if can?(:manage, Newsletter::Newsletter) %>
-      <% if can?(:manage, MailManager::Mailings) %>
+      <% if can?(:manage, MailManager::Mailing) %>
       <li><span onClick="$('#mailings_submenu').toggle();return false">Mailings</span>
         <ul id='mailings_submenu' <%= ' style="display:none"'.html_safe unless request.path =~ %r|/mail_manager| %>>
           <%= content_tag(:li, link_to('Contacts', mail_manager.contacts_path)) if can?(:manage, MailManager::Contact) %>
