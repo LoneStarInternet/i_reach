@@ -12,6 +12,15 @@ body {
   height: 85px;
   min-width: 766px;
 }
+
+.menu_expand {
+  cursor: pointer;
+}
+
+span.menu_expand:hover {
+  color: #fc6;
+}
+
 /*
 img {
    display: block;
