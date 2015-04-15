@@ -47,10 +47,16 @@ group :post_office do
 end
 
 # Set gems for local testing
-#gem 'mail_manager', git: "ssh://git@bender.lnstar.com/var/git/mail_manager.git", branch: "rails3.2.x"
-#gem 'newsletter', git: "ssh://git@bender.lnstar.com/var/git/newsletter.git", branch: "rails3.2.x"
-gem 'mail_manager', path: "/home/chrisboy/Projects/LSI/mail_manager/"
-gem 'newsletter', path: "/home/chrisboy/Projects/LSI/newsletter/"
+if ENV['MAIL_MANAGER_GEM_PATH']
+  gem 'mail_manager', path: ENV['MAIL_MANAGER_GEM_PATH']
+else
+  gem 'mail_manager', git: "ssh://git@bender.lnstar.com/var/git/mail_manager.git", branch: "rails3.2.x"
+end
+if ENV['NEWSLETTER_GEM_PATH']
+  gem 'newsletter', path: ENV['NEWSLETTER_GEM_PATH']
+else
+  gem 'newsletter', git: "ssh://git@bender.lnstar.com/var/git/newsletter.git", branch: "rails3.2.x"
+end
 
 # To use debugger
 # gem 'debugger'
