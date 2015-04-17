@@ -1,9 +1,9 @@
-if defined?(CanCan::Ability)
-  class Ability
-    include CanCan::Ability
-  
-    def initialize(user)
-      true if user.present?
-    end
+class Ability
+  include CanCan::Ability
+
+  def initialize(user)
+    Rails.logger.debug "Setting up Abilities"
+    eval Newsletter.abilities
+    eval MailManager.abilities
   end
 end

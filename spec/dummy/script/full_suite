@@ -1,0 +1,35 @@
+#!/usr/bin/env ruby
+spring stop
+
+export RAILS_ENV=test
+./script/post_office start
+
+# RUN FOR SQLITE
+
+./script/with_lock start
+cp config/database.sqlite.yml config/database.yml
+
+rm db/test.sqlite3
+spring rake db:schema:load
+
+export SQLITE_SUCCESS=0
+
+DBADAPTER=sqlite bundle exec rspec spec && export SQLITE_SUCCESS=1
+
+./script/with_lock stop
+
+#RUN FOR MYSQL
+cp config/database.local.yml config/database.yml
+
+mysqladmin -f drop i_reach_test
+mysqladmin -f create i_reach_test
+spring rake db:schema:load
+
+export MYSQL_SUCCESS=0
+
+DBADAPTER=mysql bundle exec rspec spec && export MYSQL_SUCCESS=1
+
+./script/post_office stop
+
+if [ $MYSQL_SUCCESS -eq 0 ] ; then exit 1; fi
+if [ $SQLITE_SUCCESS -eq 0 ] ; then exit 1; fi

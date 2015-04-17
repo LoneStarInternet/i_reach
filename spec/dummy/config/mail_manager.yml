@@ -1,6 +1,6 @@
 ---
 common:
-  site_url: http://lvh.me
+  site_url: http://ireach.dev
   unsubscribe_path: /listmgr
   dont_include_images_domains:
     - yahoo.com
@@ -13,7 +13,14 @@ common:
   secret: !binary |-
     YjEwMTY3OWE5MDk3ZmVmMzIxZThmNWI5YzZlYmIw
   bounce:
-    email_address: bounces@example.com
+    email_address: bounces@lvh.me
     login: test
     password: secret
-    pop_server: pop.example.com
+    pop_server: pop.lvh.me
+    port: 11002
+  #requires_authentication: true
+  #authorized_roles:
+  #  - admin
+test: 
+  site_url: http://ireach.lvh.me:4700
+    

@@ -16,12 +16,12 @@ Gem::Specification.new do |s|
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.md"]
 
-  s.add_dependency "rails", "~> 3.2.19"
-  s.add_dependency 'jquery-rails'
-  s.add_dependency 'jquery-ui-rails'
-  s.add_dependency 'jquery-ui-themes'
-  s.add_dependency "mail_manager"
-  s.add_dependency "newsletter"
+  s.add_dependency "rails", "~>3.2"
+  s.add_dependency 'jquery-rails', "~>3.1"
+  s.add_dependency 'jquery-ui-rails', "~>5.0"
+  s.add_dependency 'jquery-ui-themes', "~>0.0"
+  s.add_dependency "mail_manager", "~>3.0"
+  s.add_dependency "newsletter", "~>3.0"
   s.add_dependency 'cancancan', '~>1.9'
-  s.add_development_dependency "mysql2"
+  s.add_development_dependency "mysql2", "~>0.3"
 end

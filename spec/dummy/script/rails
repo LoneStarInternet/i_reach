@@ -3,4 +3,23 @@
 
 APP_PATH = File.expand_path('../../config/application',  __FILE__)
 require File.expand_path('../../config/boot',  __FILE__)
+
+# THIS IS NEW:
+ENV['RAILS_ENV'] ||= 'development'
+require "rails/commands/server"
+module Rails
+  class Server
+    def default_options
+      super.merge({
+        :Port        => (ENV['SERVER_PORT'] || 3000),
+        :environment => (ENV['RAILS_ENV'] || "development").dup,
+        :daemonize   => false,
+        :debugger    => false,
+        :pid         => File.expand_path("tmp/pids/server.pid"),
+        :config      => File.expand_path("config.ru")
+      })
+    end
+  end
+end
+# END OF CHANGE
 require 'rails/commands'

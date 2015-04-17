@@ -1,11 +1,19 @@
 .bundle/
+*.swp
+Gemfile.lock*
 log/*.log
 pkg/
+.DS_Store
+.Gemfile.lock*
 *.gem
+coverage
 spec/dummy/db/*.sqlite3
 spec/dummy/log/*.log
 spec/dummy/tmp/
 spec/dummy/.sass-cache
 spec/dummy/designs
+spec/dummy/newsletters
+spec/dummy/public
 spec/dummy/config/database.yml
+spec/dummy/config/database.local.yml
 

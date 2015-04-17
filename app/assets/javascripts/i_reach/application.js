@@ -13,4 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery-ui
+//= require newsletter/application
+//= require mail_manager/application
 //= require i_reach/jquery-ui-timepicker-addon

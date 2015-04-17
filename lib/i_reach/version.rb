@@ -1,3 +1,3 @@
 module IReach
-  VERSION = "0.1.2"
+  VERSION = "3.0.1"
 end

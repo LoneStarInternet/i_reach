@@ -2,6 +2,7 @@ module IReach
   class Engine < ::Rails::Engine
     isolate_namespace IReach
   end
+  PLUGIN_ROOT = File.expand_path(File.join(File.dirname(__FILE__),'..','..'))
 end
 IReach::Engine.config.to_prepare do
   ApplicationController.helper(LayoutHelper)
