@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20141009143126) do
+ActiveRecord::Schema.define(:version => 20150423145348) do
 
   create_table "delayed_jobs", :force => true do |t|
     t.integer  "priority",   :default => 0, :null => false
@@ -48,9 +48,11 @@ ActiveRecord::Schema.define(:version => 20141009143126) do
     t.string   "last_name"
     t.integer  "upated_by"
     t.integer  "created_by"
-    t.datetime "created_at",       :null => false
-    t.datetime "updated_at",       :null => false
+    t.datetime "created_at",             :null => false
+    t.datetime "updated_at",             :null => false
     t.datetime "deleted_at"
+    t.string   "login_token"
+    t.datetime "login_token_created_at"
   end
 
   create_table "mail_manager_mailables", :force => true do |t|
@@ -88,8 +90,11 @@ ActiveRecord::Schema.define(:version => 20141009143126) do
     t.datetime "status_changed_at"
     t.datetime "scheduled_at"
     t.boolean  "include_images"
-    t.datetime "created_at",         :null => false
-    t.datetime "updated_at",         :null => false
+    t.datetime "created_at",                        :null => false
+    t.datetime "updated_at",                        :null => false
+    t.integer  "bounces_count",      :default => 0
+    t.integer  "messages_count",     :default => 0
+    t.datetime "deleted_at"
   end
 
   create_table "mail_manager_messages", :force => true do |t|
