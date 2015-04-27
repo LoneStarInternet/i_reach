@@ -20,8 +20,8 @@ Gem::Specification.new do |s|
   s.add_dependency 'jquery-rails', "~>3.1"
   s.add_dependency 'jquery-ui-rails', "~>5.0"
   s.add_dependency 'jquery-ui-themes', "~>0.0"
-  s.add_dependency "mail_manager", "~>3.0"
-  s.add_dependency "newsletter", "~>3.0"
+  s.add_dependency "mail_manager", "~>3.2"
+  s.add_dependency "newsletter", "~>3.2"
   s.add_dependency 'cancancan', '~>1.9'
   s.add_development_dependency "mysql2", "~>0.3"
 end
