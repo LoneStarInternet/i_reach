@@ -3,6 +3,10 @@ IReach
 
 IReach integrates the gems [newsletter](https://github.com/LoneStarInternet/newsletter/) and [mail_manager](https://github.com/LoneStarInternet/mail_manager) into a useable site with administration and useful navigation with little work to get it going.
 
+Online Documentation: 
+* [Homepage](http://ireachnews.com)
+* [i_reach github](https://github.com/LoneStarInternet/i_reach/wiki)
+
 Requirements
 ------------
 

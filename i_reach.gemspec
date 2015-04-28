@@ -7,9 +7,9 @@ require "i_reach/version"
 Gem::Specification.new do |s|
   s.name        = "i_reach"
   s.version     = IReach::VERSION
-  s.authors     = ["Christopher Hauboldt", "Ken Biggs"]
-  s.email       = ["chauboldt@lone-star.net"]
-  s.homepage    = "http://lone-star.net"
+  s.authors     = ['Lone Star Internet', "Christopher Hauboldt"]
+  s.email       = ['biz@lone-star.net', "chauboldt@lone-star.net"]
+  s.homepage    = "http://ireachnews.com"
   s.licenses    = ['MIT']
   s.summary     = "Newsletter and Mailing List manager"
   s.description = "Combines the 'newsletter' and 'mail_manager' gems with viable admin, login and navigation."
