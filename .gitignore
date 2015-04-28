@@ -1,6 +1,5 @@
 .bundle/
 *.swp
-Gemfile.lock*
 log/*.log
 pkg/
 .DS_Store

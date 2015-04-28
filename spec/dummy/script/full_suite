@@ -1,4 +1,4 @@
-#!/usr/bin/env ruby
+#!/bin/bash
 spring stop
 
 export RAILS_ENV=test
@@ -10,7 +10,7 @@ export RAILS_ENV=test
 cp config/database.sqlite.yml config/database.yml
 
 rm db/test.sqlite3
-spring rake db:schema:load
+bundle exec rake db:schema:load
 
 export SQLITE_SUCCESS=0
 
@@ -23,7 +23,7 @@ cp config/database.local.yml config/database.yml
 
 mysqladmin -f drop i_reach_test
 mysqladmin -f create i_reach_test
-spring rake db:schema:load
+bundle exec rake db:schema:load
 
 export MYSQL_SUCCESS=0
 

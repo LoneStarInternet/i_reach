@@ -50,12 +50,12 @@ end
 if ENV['MAIL_MANAGER_GEM_PATH']
   gem 'mail_manager', path: ENV['MAIL_MANAGER_GEM_PATH']
 else
-  gem 'mail_manager', git: "ssh://git@bender.lnstar.com/var/git/mail_manager.git", branch: "rails3.2.x"
+  gem 'mail_manager', "~>3.2"
 end
 if ENV['NEWSLETTER_GEM_PATH']
   gem 'newsletter', path: ENV['NEWSLETTER_GEM_PATH']
 else
-  gem 'newsletter', git: "ssh://git@bender.lnstar.com/var/git/newsletter.git", branch: "rails3.2.x"
+  gem 'newsletter', "~>3.2"
 end
 
 # To use debugger
