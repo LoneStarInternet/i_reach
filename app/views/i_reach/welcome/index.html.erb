@@ -1,35 +1,35 @@
 <p><b>Welcome to the administrative interface for IReach.</b></p>
-
+<p><a href="http://ireachnews.com" target="_blank">Detailed Documentation Here</a></b></p>
 <p><b>Steps to create a newsletter</b>
-<ul>
-<li>Select &quot;Newsletters&quot; from the left menu</li>
-<li>Select the &quot;New Newsletter&quot; link
-   <ul><li>Enter a unique name for the newsletter and click &quot;Save&quot;</li></ul></li>
-<li>Click on the &quot;Edit&quot; button for the new newsletter
-   <ul><li>You will probably want to add the &quot;Navigation Bar&quot; element first
-      <ul><li>Select &quot;Add Element&quot; next to the Nav Bar &quot;Navigation Bar&quot; element</li>
-      <li>Enter the Spacer Width, and the link text and urls for the navigation bar and select &quot;Submit&quot;</li></ul></li>
-   <li>Next add a Newsletter Title / Subtitle to your newsletter
-      <ul><li>Select &quot;Newsletter Title / Subtitle&quot; from the dropdown next the &quot;Main area&quot; section, then select &quot;Add Element&quot;</li>
-      <li>Enter your Title text, Title Font Size, Subtitle text, and Subtitle Font Size values and select &quot;Submit&quot;</li></ul></li>
-   <li>Next add articles to your newsletter
-      <ul><li>Select &quot;Add Element&quot; next to the Main area &quot;Article&quot; element</li>
-      <li>Browse and select any images for the left and/or right image.</li>
-      <li>Cut and paste the article content from your text editor (notepad probably).</li>
-      <li>When you're done, select &quot;Submit&quot; to create the article.</li></ul></li></ul></li>
-<li>When you're done editing the newsletter, the next step is to create a Mailing</li>
-</ul></p>
+<ol>
+<li>Select Newsletters from the navigation menu.</li>
+<li>You will be presented with a list of existing newsletters you can 'Publish/Un-Publish', 'Edit', or 'Delete' as well as the 'New Newsletter' button to create a new newsletter.</li>
+<li>From the newsletter list at 'Newsletters', you can 'Publish/Un-Publish' your newsletter. Published newsletters are displayed at the url / by default.</li>
+<li>When you select the 'New Newsletter' button, you will be presented with a form to select a design to use for this Newsletter, and enter a Name for the Newsletter which you will use to identify the Newsletter when creating a Mailing.</li>
+<li>Once you have submitted the initial selections to create a new Newsletter (or have selected 'Edit' for an existing newsletter from the newsletters list) you will be presented with the WYSIWYG interface to compose the Newsletter contents.</li>
+<li>There is a dropdown selection of elements for each area in the newsletter design.</li>
+<li>Select an Element to add to the Newsletter and click [Add Element]. This will load the form to populate the element. Text type fields will appear as text boxes, Textarea type fields will appear as text areas, and Inlineasset type fields will provide both a text field in which you could enter a url and an upload field where you could browse for an asset. Complete the fields in your Element and click [Submit].</li>
+<li>You are then returned to the WYSIWYG Newsletter editor. After you have several Elements in an Area, you may drag the Elements in the interface within the element's area to order them. You will also notice that when you mouse over an Element a top tab will display the Delete and Edit links allowing you to manage the elements composing the newsletter.</li>
+</ol></p>
 
 <p><b>Steps to create a mailing</b>
-<ul>
+<ol>
 <li>Select &quot;Mailings&quot; from the left menu</li>
-<li>Select the &quot;New Mailing&quot; button
-   <ul><li>Enter an email subject</li>
-   <li>You may modify the From email address if you wish</li>
-   <li>Select the unique newsletter name you entered when you created the newsletter for the mailable item</li>
-   <li>Select a date and time for your mailing to occur</li>
+<li>Select &quot;Mailings&quot; from the &quot;Mailing&quot; submenu</li>
+<li>Here you will be presented with a list of prior Mailings.
+ <ul>
+   <li>You may select [Send Test] to send a test message to an email address you enter.</li>
+   <li>If the Mailing has not been sent (Status = pending or scheduled), you may select [Edit] to edit the Mailing or you may select [Schedule] to schedule the Newsletter to be sent at the scheduled time.</li>
+   <li>If the Mailing has been sent, you can select [Messages] to view a list of contacts with various statuses based on the success or failure of the email message sent to them, or you may select [Bounces] to view a list of bounced emails.</li></ul></li>
+<li>Select the &quot;New Mailing&quot; button</li>
+<li>When creating or editing a Mailing, a Mailing has the following attributes:
+ <ul>
+   <li>Email subject - This will allow you to identify the mailing in the Mailing list.</li>
+   <li>From email address - This sets the from email address when the Newsletter is mailed. This can be in the format: "Some Name" <email@address.com> allowing you to have an alias for the email address. The default value is configured in /config/mail_manager.yml.</li>
+   <li>Select a newsletter - Select your Newsletter name from the list.</li>
+   <li>Send emails at - Select a date and time to send your Newsletter. NOTE: The mailing will initially be created with a status of "pending". It will be necessary to select the [Schedule] button to trigger sending the email at the scheduled time.</li>
    <li>If you uncheck the &quot;Include images&quot; checkbox, the email will be sent with links to the images on the web site and the user will need to select &quot;Load images&quot; in their email program to view the images.  Otherwise the images are sent with the email as attachments.</li>
-   <li>Select the checkboxes for the mailing lists you wish to deliver the mailing to</li>
+   <li>Send to these mailing lists - Select the checkboxes for the lists you wish to include in your mailing.</li>
    <li>When you're done, select &quot;Submit&quot; to create the mailing</li></ul></li>
 <li>At this point the mailing is &quot;Pending&quot;</li>
 <li>You should send yourself a test email using the &quot;Send Test&quot; button</li>

@@ -5,7 +5,6 @@ IReach integrates the gems [newsletter](https://github.com/LoneStarInternet/news
 
 Online Documentation: 
 * [Homepage](http://ireachnews.com)
-* [i_reach github](https://github.com/LoneStarInternet/i_reach/wiki)
 
 Requirements
 ------------
