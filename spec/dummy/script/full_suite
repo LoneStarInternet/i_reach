@@ -1,5 +1,4 @@
 #!/bin/bash
-spring stop
 
 export RAILS_ENV=test
 ./script/post_office start
