@@ -1,7 +1,7 @@
 IReach
 ======
 
-IReach integrates the gems [newsletter](https://github.com/LoneStarInternet/newsletter/) and [mail_manager](https://github.com/LoneStarInternet/mail_manager) into a useable site with administration and useful navigation with little work to get it going.
+IReach integrates the gems [newsletter](https://github.com/LoneStarInternet/newsletter/) and [mail_manager](https://github.com/LoneStarInternet/mail_manager) into a useable site with administration access control and useful navigation with little work to get it going.
 
 Online Documentation: 
 * [Homepage](http://ireachnews.com)
