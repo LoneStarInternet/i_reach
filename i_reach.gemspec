@@ -13,6 +13,19 @@ Gem::Specification.new do |s|
   s.licenses    = ['MIT']
   s.summary     = "Newsletter and Mailing List manager"
   s.description = "Combines the 'newsletter' and 'mail_manager' gems with viable admin, login and navigation."
+  s.post_install_message = <<-EOT
+    *** IREACH ****
+    Added 'Style Sheet' text area to newsletter design.
+      **This allows us to properly trigger viewport for mobile window size in newsletter editor.
+      
+    ** Required Actions ( pre 3.2.7 ) **
+    Please move your inline styles to the new 'Style Sheet' text area in the newsletter design editor.
+
+    ** Required Actions for every upgrade **
+    rake i_reach:upgrade # this adds any new migrations and migrates your DB ...
+      ** NOTE! you should try this in development before pushing to your production site
+    *** END IREACH ****
+  EOT
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.md"]
 
