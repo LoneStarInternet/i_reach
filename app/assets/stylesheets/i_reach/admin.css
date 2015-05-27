@@ -154,6 +154,10 @@ label {font-size: 11pt;
    padding: 7px 7px 0 0;
 }       
 
+.field {
+  clear: both;
+}
+
 input, select, textarea {
         margin: 6px 0;
         padding: 2px;
