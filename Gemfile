@@ -13,6 +13,8 @@ gem "devise"
 gem 'jquery-ui-rails'
 gem "delayed_job_web"
 
+gem 'mysql2', '~>0.3.10'
+
 # Testing Gems
 gem "sqlite3"
 gem 'pry-rails'
