@@ -6,6 +6,7 @@ source "https://rubygems.org"
 gem 'dotenv-rails', :require => 'dotenv/rails-now'
 gemspec
 
+gem 'xpath', '~>2.1'
 # jquery-rails is used by the dummy application
 gem "jquery-rails"
 gem "devise"
@@ -38,6 +39,7 @@ group :test do
   gem 'poltergeist'
   gem 'database_cleaner'
   gem 'cucumber-rails', require: false
+  gem 'cucumber', '~>2.1'
 end
 
 # required for tests... can be used to look at mail with a mail client without real smtp
