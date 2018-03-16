@@ -299,7 +299,7 @@ DEPENDENCIES
   jquery-rails
   jquery-ui-rails
   mail_manager (~> 3.2)
-  mysql2 (~> 0.3.10)
+  mysql2 (~> 0.3)
   newsletter (~> 3.2)
   poltergeist
   post_office
