@@ -30,6 +30,8 @@ group :test, :development do
   gem "factory_girl_rails", "~>4.3"
   gem "faker"
   gem 'post_office'
+  gem 'brakeman'
+  gem 'bundle-audit'
 end
 
 # Testing Gems

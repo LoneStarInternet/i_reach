@@ -48,7 +48,13 @@ GEM
     arel (3.0.3)
     backports (3.11.1)
     bcrypt (3.1.11)
+    brakeman (4.2.1)
     builder (3.0.4)
+    bundle-audit (0.1.0)
+      bundler-audit
+    bundler-audit (0.6.0)
+      bundler (~> 1.2)
+      thor (~> 0.18)
     cancancan (1.17.0)
     capybara (2.18.0)
       addressable
@@ -283,6 +289,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  brakeman
+  bundle-audit
   capybara
   cucumber (~> 2.1)
   cucumber-rails
